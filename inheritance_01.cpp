@@ -28,7 +28,12 @@ class A
 
 class B:A
 {
-
+    public:
+    void derived_class()
+    {
+        fun_in_protected();
+        fun_in_public();
+    }
 
 };
 
@@ -36,7 +41,7 @@ class B:A
 int main()
 {
     B b;
-    b.fun_in_public();
+    b.derived_class();
 }
 
 //  as the base class is being inherited by default in private, so we can not access any function of base class
